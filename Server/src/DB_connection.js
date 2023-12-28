@@ -16,7 +16,13 @@ if (SECURE) {
 }
 const database = new Sequelize(
    strConn,
-   { logging: false, native: false }
+   { logging: false, native: false },
+   {
+      ssl: {
+         rejectUnauthorized: false,
+         ca: fs.readFileSync('/path/to/server-certificates/root.crt').toString(),
+      }
+   },
 );
 CuentaModel(database);
 ErrorSalidaModel(database);
