@@ -18,9 +18,12 @@ const database = new Sequelize(
    strConn,
    { logging: false, native: false },
    {
-      ssl: {
-         rejectUnauthorized: false,
-      }
+      dialectOptions: {
+         ssl: {
+            require: true,
+            rejectUnauthorized: false // <<<<<<< YOU NEED THIS
+         }
+      },
    },
 );
 CuentaModel(database);
