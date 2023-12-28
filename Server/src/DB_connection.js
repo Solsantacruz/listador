@@ -20,7 +20,6 @@ const database = new Sequelize(
    {
       ssl: {
          rejectUnauthorized: false,
-         ca: fs.readFileSync('/path/to/server-certificates/root.crt').toString(),
       }
    },
 );
