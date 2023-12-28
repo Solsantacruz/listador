@@ -16,7 +16,6 @@ if (SECURE) {
 }
 const database = new Sequelize(
    strConn,
-   { logging: false, native: false },
    {
       dialectOptions: {
          ssl: {
