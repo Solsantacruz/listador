@@ -8,8 +8,10 @@ const ErrorSalidaModel = require('../src/models/ErrorSalida');
 let strConn = '';
 if (SECURE) {
    // conexión segura (para BD remota):
+   // Esta cadena es para deploy en Railway:
    strConn = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}?sslmode=no-verify`;
-
+   // Esta cadena es para deploy en Vercel, la conservo:
+   //strConn = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}?sslmode=require`;
 } else {
    // conexión no segura (para BD local):
    strConn = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`;
