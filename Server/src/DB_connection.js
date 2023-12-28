@@ -8,10 +8,7 @@ const ErrorSalidaModel = require('../src/models/ErrorSalida');
 let strConn = '';
 if (SECURE) {
    // conexión segura (para BD remota):
-   strConn = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}?sslmode=no-verify,rejectUnauthorized: false`;
-
-   //postgres://myuser:mypassword@myhost:5432/mydatabasename?sslmode=no-verify
-
+   strConn = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}?sslmode=require&rejectUnauthorized=false`;
 } else {
    // conexión no segura (para BD local):
    strConn = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`;
