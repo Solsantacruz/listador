@@ -14,6 +14,6 @@ SECURE ? (conSegura = "SEGURA") : (conSegura = "NO SEGURA");
             showLog(`Servidor corriendo en puerto ${PORT}. Tipo de conexión: ${conSegura}`);
         });
     } catch (err) {
-        showLog("Error conectando con la base de datos (¿Está creada?). Verificar y luego reiniciar el servidor");
+        showLog(`Error conectando con la base de datos (¿Está creada?). Verificar y luego reiniciar el servidor (${err})`);
     }
 })();
