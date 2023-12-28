@@ -16,15 +16,9 @@ if (SECURE) {
 }
 const database = new Sequelize(
    strConn,
-   {
-      dialectOptions: {
-         ssl: {
-            require: true,
-            rejectUnauthorized: false // <<<<<<< YOU NEED THIS
-         }
-      },
-   },
+   { logging: false, native: false }
 );
+
 CuentaModel(database);
 ErrorSalidaModel(database);
 
