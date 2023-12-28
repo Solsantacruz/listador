@@ -1,0 +1,10 @@
+VITE_API_URL_BASE = https://listador.vercel.app/listador
+VITE_ROOT = /
+VITE_HOME = /home
+VITE_IMG_LAND = https://res.cloudinary.com/ddlwjsfml/image/upload/v1703596145/policia-datos-bancarios-sin-autorizacion_a8efgn.jpg
+VITE_IMG_ESPERA=https://res.cloudinary.com/dvptbowso/image/upload/v1698777476/PI_Videogames/Loading_ba8kpk.gif
+VITE_MY_LINKEDIN = https://www.linkedin.com/in/paulo-damian-vinci/
+VITE_MY_GITHUB = https://github.com/PauloDamianVinci/videogames
+VITE_IMG_LINKEDIN = https://res.cloudinary.com/dvptbowso/image/upload/v1699107827/PI_Videogames/LINKEDIN_kiluvy.png
+VITE_IMG_GITHUB = https://res.cloudinary.com/dvptbowso/image/upload/v1699107797/PI_Videogames/GIT_kaohrf.png
+VITE_IMG_SALIR = https://res.cloudinary.com/ddlwjsfml/image/upload/v1703602068/Salir_rfm8vd.png

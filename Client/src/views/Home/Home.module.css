@@ -1,0 +1,146 @@
+.container {
+    background-color: rgba(4, 18, 37, 0.233);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.containerLoading {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(4, 18, 37, 0.233);
+}
+
+.containerFiles {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(4, 22, 32, 0.692);
+    padding: 6%;
+}
+
+.contIniciarProc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1%;
+}
+
+
+.containerSelectCuentas {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.containerSelectMov {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.ContainerMainTitle {
+    /* background-color: rgba(206, 21, 197, 0.692); */
+    top: 0;
+    left: 0;
+    color: rgb(250, 250, 243);
+    font-family: "Courier New", Helvetica, sans-serif;
+    font-size: 1.3em;
+}
+
+.img {
+    max-width: 70%;
+    min-width: 350px;
+}
+
+.selected {
+    color: rgb(250, 250, 243);
+    font-family: "Courier New", Helvetica, sans-serif;
+    font-size: 1em;
+    padding-top: 5%
+}
+
+.contButton {
+    background-image: linear-gradient(to right, #006175 0%, #1fcab3 100%);
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #1fcab3;
+    height: 2em;
+    font-size: 2.0em;
+    padding: 4px;
+    text-decoration: none;
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contButton:hover {
+    color: #fff;
+}
+
+.contButton .button {
+    display: flex;
+    align-items: center;
+    background: #0e0e10;
+    border-radius: 10px;
+    justify-content: center;
+    height: 100%;
+    transition: background 0.5s ease;
+    width: 100%;
+    color: #1fcab3;
+    font-size: 0.7em;
+}
+
+.contButton:hover .button {
+    background: transparent;
+    color: #fff;
+}
+
+.containerNet {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.imgLink {
+    position: relative;
+    width: 70px;
+    top: 0px;
+}
+
+.imgGit {
+    position: relative;
+    width: 88px;
+    top: 8.3px;
+}
+
+.imgSalir {
+    position: relative;
+    width: 88px;
+    top: 6px;
+}
