@@ -54,4 +54,4 @@ mayor a $10000."*
 ## **🧾 Acerca del Autor**
 
 Este proyecto fue creado por [**Paulo Vinci**](https://www.linkedin.com/in/paulo-damian-vinci/).
-
+Agradecimiento especial a [**Eliana Santa Cruz**](https://github.com/Solsantacruz/) por el soporte de deploy.

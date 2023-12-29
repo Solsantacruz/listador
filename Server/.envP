@@ -1,0 +1,8 @@
+DB_USER=postgres
+DB_PASSWORD=6C-AfF652Cg*4F1Aac15A65-aA1CA21a
+DB_HOST=monorail.proxy.rlwy.net
+DB_PORT=25266
+DB_NAME=lauravargas
+PORT=3001
+SECURE=true
+MUST_LOG=0

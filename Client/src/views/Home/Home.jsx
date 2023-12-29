@@ -66,9 +66,7 @@ const Home = () => {
           formDataMov.append('file', selectedFileMovim);
           return axios.post(API_URL_BASE + "/movim", formDataMov)  // envío por Axios al backend
         } else {
-          toast.error("ERROR: " + responseAcc.data.msg);
-          setLoadingFile(false);
-          return;
+          return Promise.reject(responseAcc.data.msg);
         }
       })
       .then(responseMov => {
@@ -79,9 +77,7 @@ const Home = () => {
           totLess = responseMov.data.menoresDiezMil;
           return axios.get(API_URL_BASE + "/results")  // envío por Axios al backend
         } else {
-          toast.error("ERROR: " + responseMov.data.msg);
-          setLoadingFile(false);
-          return;
+          return Promise.reject(responseMov.data.msg);
         }
       })
       .then(responseSend => {
@@ -111,8 +107,8 @@ const Home = () => {
         return;
       })
       .catch(error => {
-        toast.error("ERROR GENERAL: " + error);
         setLoadingFile(false);
+        toast.error(error);
         return;
       });
   }

@@ -21,6 +21,12 @@ const postFileCuentas = async (req, res) => {
       }
       const fileContent = file.buffer.toString('utf-8');
       const lines = fileContent.split('\n');
+
+      if (lines.length === 0) {
+        showLog('postFileCuentas Error: Formato incorrecto.');
+        return res.status(200).json({ "rx": "error", "msg": "Error al procesar el archivo de cuentas: formato incorrecto" });
+      }
+
       // Elimino todas las cuentas previas en tabla:
       await Cuenta.destroy({ where: {} });
       let regCreated;
@@ -28,6 +34,10 @@ const postFileCuentas = async (req, res) => {
       // Cargo en BDD:
       for (let index = 0; index < lines.length; index++) {
         const line = lines[index];
+        if (line.length !== 45 && line.length !== 0) {
+          showLog('postFileCuentas Error: Formato incorrecto.');
+          return res.status(200).json({ "rx": "error", "msg": "Error al procesar el archivo de cuentas: formato incorrecto" });
+        }
         const fields = line.split('\t');
         if (fields[0]) {
           const saldo = parseFloat(fields[2].trim().replace(',', '.'));

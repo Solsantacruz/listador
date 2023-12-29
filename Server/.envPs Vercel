@@ -1,0 +1,8 @@
+DB_USER=default
+DB_PASSWORD=EMU8OjkLZV6T
+DB_HOST=ep-icy-mud-34964588.us-east-1.postgres.vercel-storage.com
+DB_PORT=5432
+DB_NAME=listador
+PORT=3001
+SECURE=true
+MUST_LOG=0

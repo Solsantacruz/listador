@@ -40,6 +40,10 @@ const postFileMovim = async (req, res) => {
         // fields[0]: nro de cuenta, fields[1]: movimiento, fields[2]: monto
         const line = lines[index];
         const fields = line.split('\t');
+        if (line.length !== 21 && line.length !== 0) {
+          showLog('postFileMovim Error: Formato incorrecto.');
+          return res.status(200).json({ "rx": "error", "msg": "Error al procesar el archivo de movimientos: formato incorrecto" });
+        }
         if (fields[0]) {
           const account = fields[0].trim();
           const mov = fields[1].trim();
